@@ -1,9 +1,9 @@
 primary: 
     mac_path: /ryan/software
     linux_path: /ryan/software
-    windows_path: \\ryan\software
+    windows_path: S:\software
 
 film: 
     mac_path: /ryan/film
     linux_path: /ryan/film
-    windows_path: \\ryan\film
+    windows_path: Z:\film
