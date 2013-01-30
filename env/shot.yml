@@ -13,20 +13,25 @@ engines:
         template_work: max_shot_work
       tk-multi-about:
         location: {name: tk-multi-about, type: app_store, version: v0.1.3}
-      tk-multi-loader:
+      tk-multi-loader-texture:
         hook_add_file_to_scene: default
         location: {name: tk-multi-loader, type: app_store, version: v0.1.6}
-        menu_name: Load Objects...
+        menu_name: Load Texture...
         publish_filters: []
         sg_entity_types:
-          Shot: []
+          Asset: []
         single_select: true
-        tank_types: []
+        tank_types: [Diffuse Texture, Specular Texture]
       tk-multi-recentfiles:
         hook_add_file_to_scene: default
         launch_at_startup: true
         location: {name: tk-multi-recentfiles, type: app_store, version: v0.2.2}
         template_work: max_shot_work
+      tk-multi-revolver:
+        location: {name: tk-multi-revolver, type: app_store, version: v0.1.2}
+        rv_path_linux: rv
+        rv_path_mac: /Applications/RV64.app
+        rv_path_windows: C:\Program Files\RV\RV64.exe        
       tk-multi-setcontext:
         enable_create_tasks: true
         launch_at_startup: false

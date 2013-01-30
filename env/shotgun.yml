@@ -39,7 +39,7 @@ engines:
         windows_path: C:\Program Files\Autodesk\Maya2012\bin\maya.exe
       tk-shotgun-launchmotionbuilder:
         deny_permissions: []
-        deny_platforms: [Linux, Mac]
+        deny_platforms: []
         engine: tk-motionbuilder
         entity_types: [Task]
         hook_before_app_launch: default
