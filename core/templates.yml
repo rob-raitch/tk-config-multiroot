@@ -118,6 +118,25 @@ paths:
       root_name: film
 
     #
+    # 3dsmax
+    #
+
+    # The location of WIP files
+    max_shot_work:
+      definition: sequences/{Sequence}/{Shot}/{Step}/work/max/{name}.v{version}.max
+      root_name: film
+
+    # The location of backups of WIP files
+    max_shot_snapshot:
+      definition: sequences/{Sequence}/{Shot}/{Step}/work/max/snapshots/{name}.v{version}.{timestamp}.max
+      root_name: film
+
+    # The location of published maya files
+    max_shot_publish:
+      definition: sequences/{Sequence}/{Shot}/{Step}/publish/max/{name}.v{version}.max
+      root_name: film
+
+    #
     # Nuke 
     #
 
@@ -193,6 +212,25 @@ paths:
     # The location of published maya files
     maya_asset_publish:
       definition: assets/{sg_asset_type}/{Asset}/{Step}/publish/maya/{name}.v{version}.ma
+      root_name: film
+
+    #
+    # 3dsmax
+    #
+    
+    # The location of WIP files
+    max_asset_work:
+      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/max/{name}.v{version}.max
+      root_name: film
+
+    # The location of backups of WIP files
+    max_asset_snapshot:
+      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/max/snapshots/{name}.v{version}.{timestamp}.max
+      root_name: film
+
+    # The location of published maya files
+    max_asset_publish:
+      definition: assets/{sg_asset_type}/{Asset}/{Step}/publish/max/{name}.v{version}.max
       root_name: film
 
     #
