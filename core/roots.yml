@@ -1,9 +1,9 @@
 primary: 
-    mac_path: /studio/software/tank_root
-    linux_path: /studio/software/tank_root
-    windows_path: z:\studio\software\tank_root
+    mac_path: /ryan/software
+    linux_path: /ryan/software
+    windows_path: z:\ryan\software
 
 film: 
-    mac_path: /studio/projects
-    linux_path: /studio/projects
-    windows_path: z:\studio\projects
+    mac_path: /ryan/film
+    linux_path: /ryan/film
+    windows_path: z:\ryan\film
