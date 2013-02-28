@@ -5,18 +5,20 @@ engines:
 
   tk-shotgun:
     apps:
+      
       tk-shotgun-folders:
         deny_permissions: []
         deny_platforms: []
         entity_types: [Sequence, Shot, Asset]
         location: {name: tk-shotgun-folders, type: app_store, version: v0.1.2}
+      
       tk-shotgun-launch3dsmax:
         deny_permissions: []
         engine: tk-3dsmax
         entity_types: [Task]
         hook_app_launch: default
         menu_name: Launch 3DSMax
-        location: {type: app_store, name: tk-multi-launchapp, version: v0.0.2}
+        location: {type: app_store, name: tk-multi-launchapp, version: v0.1.0}
         linux_args: ''
         linux_path: ''
         mac_args: ''
@@ -24,18 +26,20 @@ engines:
         windows_args: ''
         windows_path: C:\Program Files\Autodesk\3ds Max 2012\3dsmax.exe
         extra: {}
+      
       tk-shotgun-launchfolder:
         deny_permissions: []
         deny_platforms: []
         entity_types: [Sequence, Shot, Asset, Task]
         location: {name: tk-shotgun-launchfolder, type: app_store, version: v0.1.1}
+      
       tk-shotgun-launchmaya:
         deny_permissions: []
         engine: tk-maya
         entity_types: [Task]
         hook_app_launch: default
         menu_name: Launch Maya
-        location: {type: app_store, name: tk-multi-launchapp, version: v0.0.2}
+        location: {type: app_store, name: tk-multi-launchapp, version: v0.1.0}
         linux_args: ''
         linux_path: maya
         mac_args: ''
@@ -43,13 +47,14 @@ engines:
         windows_args: ''
         windows_path: C:\Program Files\Autodesk\Maya2012\bin\maya.exe
         extra: {}
+        
       tk-shotgun-launchmotionbuilder:
         deny_permissions: []
         engine: tk-motionbuilder
         entity_types: [Task]
         hook_app_launch: default
         menu_name: Launch MotionBuilder
-        location: {type: app_store, name: tk-multi-launchapp, version: v0.0.2}
+        location: {type: app_store, name: tk-multi-launchapp, version: v0.1.0}
         linux_args: ''
         linux_path: ''
         mac_args: ''
@@ -57,13 +62,14 @@ engines:
         windows_args: ''
         windows_path: C:\Program Files\Autodesk\MotionBuilder 2013\bin\x64\motionbuilder.exe
         extra: {}
+        
       tk-shotgun-launchnuke:
         deny_permissions: []
         engine: tk-nuke
         entity_types: [Task]
         hook_app_launch: default
         menu_name: Launch Nuke
-        location: {type: app_store, name: tk-multi-launchapp, version: v0.0.2}
+        location: {type: app_store, name: tk-multi-launchapp, version: v0.1.0}
         linux_args: ''
         linux_path: Nuke6.3
         mac_args: ''
@@ -71,6 +77,7 @@ engines:
         windows_args: ''
         windows_path: C:\Program Files\Nuke6.3v8\Nuke6.3.exe
         extra: {}
+        
       tk-shotgun-launchpublish:
         deny_permissions: []
         deny_platforms: []
@@ -80,6 +87,7 @@ engines:
         viewer_path_linux: rv
         viewer_path_mac: /Applications/RV64.app
         viewer_path_windows: C:\Program Files\RV\RV64.exe
+        
       tk-shotgun-launchrevolver:
         deny_permissions: []
         deny_platforms: []
