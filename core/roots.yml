@@ -1,9 +1,20 @@
-primary: 
-    mac_path: /ryan/software
-    linux_path: /ryan/software
-    windows_path: z:\ryan\software
+#
+# Copyright (c) 2012 Shotgun Software, Inc
+# ----------------------------------------------------
 
-film: 
-    mac_path: /ryan/film
-    linux_path: /ryan/film
-    windows_path: z:\ryan\film
+# this file defines all the different disk locations that this config uses.
+# these paths can be altered at project creation time to ensure that they map 
+# to the correct location. 
+
+primary: 
+    description: "A location where the primary data is located."
+    mac_path: 
+    linux_path: 
+    windows_path: 
+
+secondary:
+    description: "A secondary location where additional data is located"
+    mac_path:
+    linux_path:
+    windows_path:
+

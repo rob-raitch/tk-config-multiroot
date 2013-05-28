@@ -57,6 +57,8 @@ keys:
         format_spec: "04"
     eye:
         type: str
+        
+
 
 
 #
@@ -70,125 +72,204 @@ keys:
 
 paths:
 
+
+    shot_root: sequences/{Sequence}/{Shot}/{Step}
+
+
     ##########################################################################################
     # Shot pipeline 
     #
 
     #
+    # Photoshop
+    #
+
+    # The location of WIP files
+    photoshop_shot_work:
+      definition: '@shot_root/work/photoshop/{name}.v{version}.psd'
+      root_name: primary
+
+    # The location of backups of WIP files
+    photoshop_shot_snapshot:
+      definition: '@shot_root/work/photoshop/snapshots/{name}.v{version}.{timestamp}.psd'
+      root_name: primary
+
+    # The location of published files
+    photoshop_shot_publish_psd:
+      definition: '@shot_root/publish/photoshop/psd/{name}.v{version}.psd'
+      root_name: primary
+    photoshop_shot_publish_jpg:
+      definition: '@shot_root/publish/photoshop/jpg/{name}.v{version}.jpg'
+      root_name: primary
+
+    #
     # Maya
     #
 
-    # project
+    # define the location of a work area
     shot_work_area_maya:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/maya
-      root_name: film
+      definition: '@shot_root/work/maya'
+      root_name: primary
+    
+    # define the location of a publish area
+    shot_publish_area_maya:
+      definition: '@shot_root/publish/maya'
+      root_name: primary
 
     # The location of WIP files
     maya_shot_work:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/maya/{name}.v{version}.ma
-      root_name: film
+      definition: '@shot_root/work/maya/{name}.v{version}.ma'
+      root_name: primary
 
     # The location of backups of WIP files
     maya_shot_snapshot:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/maya/snapshots/{name}.v{version}.{timestamp}.ma
-      root_name: film
+      definition: '@shot_root/work/maya/snapshots/{name}.v{version}.{timestamp}.ma'
+      root_name: primary
 
     # The location of published maya files
     maya_shot_publish:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/maya/{name}.v{version}.ma
-      root_name: film
+      definition: '@shot_root/publish/maya/{name}.v{version}.ma'
+      root_name: primary
 
-    #
-    # Motion Builder
-    #
-
-    # The location of WIP files
-    mobu_shot_work:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/mobu/{name}.v{version}.fbx
-      root_name: film
-
-    # The location of backups of WIP files
-    mobu_shot_snapshot:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/mobu/snapshots/{name}.v{version}.{timestamp}.fbx
-      root_name: film
-
-    # The location of published maya files
-    mobu_shot_publish:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/mobu/{name}.v{version}.fbx
-      root_name: film
 
     #
     # 3dsmax
     #
 
+    # define the location of a work area
+    shot_work_area_max:
+      definition: '@shot_root/work/3dsmax'
+      root_name: primary
+    
+    # define the location of a publish area
+    shot_publish_area_max:
+      definition: '@shot_root/publish/3dsmax'
+      root_name: primary
+
     # The location of WIP files
     max_shot_work:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/max/{name}.v{version}.max
-      root_name: film
+      definition: '@shot_root/work/3dsmax/{name}.v{version}.max'
+      root_name: primary
 
     # The location of backups of WIP files
     max_shot_snapshot:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/max/snapshots/{name}.v{version}.{timestamp}.max
-      root_name: film
+      definition: '@shot_root/work/3dsmax/snapshots/{name}.v{version}.{timestamp}.max'
+      root_name: primary
 
     # The location of published maya files
     max_shot_publish:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/max/{name}.v{version}.max
-      root_name: film
+      definition: '@shot_root/publish/3dsmax/{name}.v{version}.max'
+      root_name: primary
+
+
+    #
+    # Motionbuilder
+    #
+
+    # The location of WIP files
+    mobu_shot_work:
+      definition: '@shot_root/work/mobu/{name}.v{version}.fbx'
+      root_name: primary
+
+    # The location of backups of WIP files
+    mobu_shot_snapshot:
+      definition: '@shot_root/work/mobu/snapshots/{name}.v{version}.{timestamp}.fbx'
+      root_name: primary
+
+    # The location of published maya files
+    mobu_shot_publish:
+      definition: '@shot_root/publish/mobu/{name}.v{version}.fbx'
+      root_name: primary
 
     #
     # Nuke 
     #
 
+    # define the location of a work area
+    shot_work_area_nuke:
+      definition: '@shot_root/work/nuke'
+      root_name: primary
+    
+    # define the location of a publish area
+    shot_publish_area_nuke:
+      definition: '@shot_root/publish/nuke'
+      root_name: primary
+
     # The location of WIP script files
     nuke_shot_work:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/nuke/{name}.v{version}.nk
-      root_name: film
+      definition: '@shot_root/work/nuke/{name}.v{version}.nk'
+      root_name: primary
 
     # The location of backups of WIP files
     nuke_shot_snapshot:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/nuke/snapshots/{name}.v{version}.{timestamp}.nk
-      root_name: film
+      definition: '@shot_root/work/nuke/snapshots/{name}.v{version}.{timestamp}.nk'
+      root_name: primary
 
     # The location of published nuke script files
     nuke_shot_publish:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/nuke/{name}.v{version}.nk
-      root_name: film
+      definition: '@shot_root/publish/nuke/{name}.v{version}.nk'
+      root_name: primary
 
     # write node outputs
     nuke_shot_render_mono_dpx:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{SEQ}.dpx
-      root_name: film
+      definition: '@shot_root/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{SEQ}.dpx'
+      root_name: primary
     nuke_shot_render_mono_dpx_review_mov:
-      definition: sequences/{Sequence}/{Shot}/{Step}/review/{Shot}_{name}_{channel}_v{version}.{iteration}.mov
-      root_name: film
+      definition: '@shot_root/review/{Shot}_{name}_{channel}_v{version}.{iteration}.mov'
+      root_name: primary
     nuke_shot_render_mono_dpx_review_seq:
-      definition: sequences/{Sequence}/{Shot}/{Step}/review/{Shot}_{name}_{channel}_v{version}.{iteration}/{Shot}_{name}_{channel}_v{version}.{iteration}.{SEQ}.dpx
-      root_name: film
+      definition: '@shot_root/review/{Shot}_{name}_{channel}_v{version}.{iteration}/{Shot}_{name}_{channel}_v{version}.{iteration}.{SEQ}.dpx'
+      root_name: primary
     nuke_shot_render_pub_mono_dpx:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{SEQ}.dpx
-      root_name: film
+      definition: '@shot_root/publish/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{SEQ}.dpx'
+      root_name: primary
 
     nuke_shot_render_stereo:
-      definition: sequences/{Sequence}/{Shot}/{Step}/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_{eye}_v{version}.{SEQ}.exr
-      root_name: film
+      definition: '@shot_root/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_{eye}_v{version}.{SEQ}.exr'
+      root_name: primary
     nuke_shot_render_stereo_review_mov:
-      definition: sequences/{Sequence}/{Shot}/{Step}/review/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{iteration}.mov
-      root_name: film
+      definition: '@shot_root/review/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{iteration}.mov'
+      root_name: primary
     nuke_shot_render_stereo_review_seq:
-      definition: sequences/{Sequence}/{Shot}/{Step}/review/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{iteration}.{SEQ}.exr
-      root_name: film
+      definition: '@shot_root/review/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_v{version}.{iteration}.{SEQ}.exr'
+      root_name: primary
     nuke_shot_render_pub_stereo:
-      definition: sequences/{Sequence}/{Shot}/{Step}/publish/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_{eye}_v{version}.{SEQ}.exr
-      root_name: film
+      definition: '@shot_root/publish/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{channel}_{eye}_v{version}.{SEQ}.exr'
+      root_name: primary
 
     # review output
     shot_quicktime_quick:
-      definition: sequences/{Sequence}/{Shot}/{Step}/review/quickdaily/{Shot}_{name}_quick_{iteration}.mov
-      root_name: film
+      definition: '@shot_root/review/quickdaily/{Shot}_{name}_quick_{iteration}.mov'
+      root_name: primary
 
     ##########################################################################################
     # Asset pipeline 
+    
+    asset_root: assets/{sg_asset_type}/{Asset}/{Step}
+    
+    
+    #
+    # Photoshop
+    #
+
+    # The location of WIP files
+    photoshop_asset_work:
+      definition: '@asset_root/work/photoshop/{name}.v{version}.psd'
+      root_name: secondary
+
+    # The location of backups of WIP files
+    photoshop_asset_snapshot:
+      definition: '@asset_root/work/photoshop/snapshots/{name}.v{version}.{timestamp}.psd'
+      root_name: secondary
+
+    # The location of published files
+    photoshop_asset_publish_psd:
+      definition: '@asset_root/publish/photoshop/psd/{name}.v{version}.psd'
+      root_name: secondary
+    photoshop_asset_publish_jpg:
+      definition: '@asset_root/publish/photoshop/jpg/{name}.v{version}.jpg'
+      root_name: secondary
+    
     
     #
     # Maya
@@ -196,80 +277,105 @@ paths:
     
     # define the location of a work area
     asset_work_area_maya:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/maya
-      root_name: film
+      definition: '@asset_root/work/maya'
+      root_name: secondary
+    
+    # define the location of a publish area
+    asset_publish_area_maya:
+      definition: '@asset_root/publish/maya'
+      root_name: secondary
 
     # The location of WIP files
     maya_asset_work:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/maya/{name}.v{version}.ma
-      root_name: film
+      definition: '@asset_root/work/maya/{name}.v{version}.ma'
+      root_name: secondary
 
     # The location of backups of WIP files
     maya_asset_snapshot:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/maya/snapshots/{name}.v{version}.{timestamp}.ma
-      root_name: film
+      definition: '@asset_root/work/maya/snapshots/{name}.v{version}.{timestamp}.ma'
+      root_name: secondary
 
     # The location of published maya files
     maya_asset_publish:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/publish/maya/{name}.v{version}.ma
-      root_name: film
+      definition: '@asset_root/publish/maya/{name}.v{version}.ma'
+      root_name: secondary
 
     #
     # 3dsmax
     #
     
+    # define the location of a work area
+    asset_work_area_max:
+      definition: '@asset_root/work/3dsmax'
+      root_name: secondary
+    
+    # define the location of a publish area
+    asset_publish_area_max:
+      definition: '@asset_root/publish/3dsmax'
+      root_name: secondary
+    
     # The location of WIP files
     max_asset_work:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/max/{name}.v{version}.max
-      root_name: film
+      definition: '@asset_root/work/3dsmax/{name}.v{version}.max'
+      root_name: secondary
 
     # The location of backups of WIP files
     max_asset_snapshot:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/max/snapshots/{name}.v{version}.{timestamp}.max
-      root_name: film
+      definition: '@asset_root/work/3dsmax/snapshots/{name}.v{version}.{timestamp}.max'
+      root_name: secondary
 
     # The location of published maya files
     max_asset_publish:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/publish/max/{name}.v{version}.max
-      root_name: film
+      definition: '@asset_root/publish/3dsmax/{name}.v{version}.max'
+      root_name: secondary
 
     #
     # Nuke
     #
 
+    # define the location of a work area
+    asset_work_area_nuke:
+      definition: '@asset_root/work/nuke'
+      root_name: secondary
+    
+    # define the location of a publish area
+    asset_publish_area_nuke:
+      definition: '@asset_root/publish'
+      root_name: secondary
+
     # outputs from the tank write node for assets
     nuke_asset_render:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{SEQ}.exr
-      root_name: film
+      definition: '@asset_root/work/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{SEQ}.exr'
+      root_name: secondary
     nuke_asset_render_review_mov:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/review/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{iteration}.mov
-      root_name: film
+      definition: '@asset_root/review/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{iteration}.mov'
+      root_name: secondary
     nuke_asset_render_review_seq:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/review/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{iteration}.{SEQ}.exr
-      root_name: film
+      definition: '@asset_root/review/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{iteration}.{SEQ}.exr'
+      root_name: secondary
     nuke_asset_render_pub:
-      definition: sassets/{sg_asset_type}/{Asset}/{Step}/publish/elements/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{SEQ}.exr
-      root_name: film
+      definition: '@asset_root/publish/elements/{name}/v{version}/{width}x{height}/{Asset}_{name}_{channel}_v{version}.{SEQ}.exr'
+      root_name: secondary
 
     # review output
     asset_quicktime_quick:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/review/quickdaily/{Asset}_{name}_quick_{iteration}.mov
-      root_name: film
+      definition: '@asset_root/review/quickdaily/{Asset}_{name}_quick_{iteration}.mov'
+      root_name: secondary
 
     # The location of WIP script files
     nuke_asset_work:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/nuke/{name}.v{version}.nk
-      root_name: film
+      definition: '@asset_root/work/nuke/{name}.v{version}.nk'
+      root_name: secondary
 
     # The location of backups of WIP files
     nuke_asset_snapshot:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/work/nuke/snapshots/{name}.v{version}.{timestamp}.nk
-      root_name: film
+      definition: '@asset_root/work/nuke/snapshots/{name}.v{version}.{timestamp}.nk'
+      root_name: secondary
 
     # The location of published nuke script files
     nuke_asset_publish:
-      definition: assets/{sg_asset_type}/{Asset}/{Step}/publish/nuke/{name}.v{version}.nk
-      root_name: film
+      definition: '@asset_root/publish/nuke/{name}.v{version}.nk'
+      root_name: secondary
 
 
 

@@ -6,10 +6,10 @@
 # Metadata defining the behaviour and requirements for this configuration
 
 # More verbose description of this item 
-display_name: "Multiroot Storage"
-description: "Multiroot Storage with Separate Tank Code Root"
+display_name: "Default Multiroot Config"
+description: "A VFX Example Config and our default configuration that uses multiple storage roots."
 
 # Required minimum versions for this item to run
-requires_shotgun_version: "v4.1.0"
-requires_core_version: "v0.12.6"
+requires_shotgun_version: "v4.3.9"
+requires_core_version: "v0.13.21"
  
