@@ -13,13 +13,13 @@
 # to the correct location. 
 
 primary: 
-    description: "A location where the primary data is located."
+    description: "A top-level root folder where *only* Sequence and Shot data lives.  Project folders will be created beneath this location as well as another for Assets."
     mac_path: 
     linux_path: 
     windows_path: 
 
 secondary:
-    description: "A secondary location where additional data is located"
+    description: "A top-level root folder where *only* Asset data lives.  Project folders will be created beneath this location as well as another for Sequences and Shots."
     mac_path:
     linux_path:
     windows_path:
