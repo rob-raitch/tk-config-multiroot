@@ -1,11 +1,11 @@
 # Copyright (c) 2013 Shotgun Software Inc.
-# 
+#
 # CONFIDENTIAL AND PROPRIETARY
-# 
-# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit 
+#
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
 # Source Code License included in this distribution package. See LICENSE.
-# By accessing, using, copying or modifying this work you indicate your 
-# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights 
+# By accessing, using, copying or modifying this work you indicate your
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
 # not expressly granted therein are reserved by Shotgun Software Inc.
 #
 
@@ -23,7 +23,7 @@ description: Apps and engines loaded when an Asset is loaded. Since std VFX conf
 includes: [./includes/app_launchers.yml, ./includes/common_apps.yml]
 
 #################################################################################################
-# define all the items that should appear in this environment 
+# define all the items that should appear in this environment
 
 engines:
   tk-3dsmax:
@@ -33,8 +33,33 @@ engines:
         tk-multi-screeningroom: '@launch_screeningroom'
     debug_logging: false
     location: {name: tk-3dsmax, type: app_store, version: v0.3.2}
+  tk-mari:
+    apps:
+      tk-multi-about: '@about'
+      tk-multi-workfiles:
+        allow_task_creation: true
+        file_extensions: []
+        hook_copy_file: default
+        hook_filter_publishes: default
+        hook_filter_work_files: default
+        hook_scene_operation: default
+        launch_at_startup: false
+        launch_change_work_area_at_startup: false
+        location: {name: tk-multi-workfiles, type: app_store, version: v0.6.0}
+        saveas_default_name: scene
+        saveas_prefer_version_up: false
+        sg_entity_type_extra_display_fields: {}
+        sg_entity_type_filters: {}
+        sg_entity_types: ["Asset"]
+        task_extra_display_fields: []
+        template_publish: null
+        template_publish_area: null
+        template_work: null
+        template_work_area: null        
+    debug_logging: false
+    location: {name: tk-mari, type: app_store, version: v1.0.0}
   tk-maya:
-    apps: 
+    apps:
         tk-multi-workfiles: '@workfiles-launch-at-startup'
         tk-multi-about: '@about'
         tk-multi-screeningroom: '@launch_screeningroom'
@@ -56,7 +81,7 @@ engines:
     - {app_instance: tk-multi-workfiles, name: Shotgun File Manager...}
     use_sgtk_as_menu_name: false
   tk-nuke:
-    apps: 
+    apps:
         tk-multi-workfiles: '@workfiles'
         tk-multi-about: '@about'
         tk-multi-screeningroom: '@launch_screeningroom'
@@ -69,7 +94,7 @@ engines:
     project_favourite_name: Shotgun Current Project
     use_sgtk_as_menu_name: false
   tk-photoshop:
-    apps: 
+    apps:
         tk-multi-workfiles: '@workfiles'
         tk-multi-about: '@about'
         tk-multi-screeningroom: '@launch_screeningroom'
@@ -77,16 +102,17 @@ engines:
     location: {name: tk-photoshop, type: app_store, version: v0.2.0}
   tk-shell:
     apps:
-        tk-multi-screeningroom: '@launch_screeningroom'
-        tk-multi-launch3dsmax: '@launch_3dsmax'
-        tk-multi-launchmaya: '@launch_maya'
-        tk-multi-launchmotionbuilder: '@launch_motionbuilder'
-        tk-multi-launchnuke: '@launch_nuke'
-        tk-multi-launchphotoshop: '@launch_photoshop'
-        tk-multi-launchsoftimage: '@launch_softimage'
+      tk-multi-screeningroom: '@launch_screeningroom'
+      tk-multi-launch3dsmax: '@launch_3dsmax'
+      tk-shotgun-launchmari: '@launch_mari'
+      tk-multi-launchmaya: '@launch_maya'
+      tk-multi-launchmotionbuilder: '@launch_motionbuilder'
+      tk-multi-launchnuke: '@launch_nuke'
+      tk-multi-launchphotoshop: '@launch_photoshop'
+      tk-multi-launchsoftimage: '@launch_softimage'
     location: {name: tk-shell, type: app_store, version: v0.4.0}
   tk-softimage:
-    apps: 
+    apps:
         tk-multi-workfiles: '@workfiles'
         tk-multi-about: '@about'
         tk-multi-screeningroom: '@launch_screeningroom'

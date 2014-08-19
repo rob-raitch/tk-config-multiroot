@@ -83,7 +83,26 @@ keys:
     project:
         type: str
         
+    # These are used for the Mari UDIM pipeline:        
+    UDIM:
+        type: sequence
+        default: "<UDIM>"
+    channel:
+        type: str
+    layer:
+        type: str
         
+    mari_project_name:
+        type: str
+        alias: name
+    asset_name:
+        type: str
+        shotgun_entity_type: Asset
+        shotgun_field_name: code
+    task_name:
+        type: str
+        shotgun_entity_type: Task
+        shotgun_field_name: content 
 
 
 
@@ -417,6 +436,15 @@ paths:
     photoshop_asset_publish:
       definition: '@asset_root/publish/photoshop/{name}.v{version}.psd'
       root_name: secondary
+
+
+    #
+    # Mari
+    #
+    
+    asset_mari_texture_tif:
+      definition: '@asset_root/publish/mari/{name}_{channel}[_{layer}].v{version}.{UDIM}.tif'
+      root_name: secondary
     
     
     #
@@ -641,3 +669,6 @@ strings:
 
     # Defines how the {tk_version} token in Hiero gets formatted back to tk.
     hiero_version: "{version}"
+
+    # define how new Mari projects should be named
+    mari_asset_project_name: "{mari_project_name} - Asset {asset_name}, {task_name}"
