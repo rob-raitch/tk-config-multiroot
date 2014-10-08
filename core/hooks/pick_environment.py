@@ -34,8 +34,12 @@ class PickEnvironment(Hook):
         
         if context.entity and context.step is None:
             # we have an entity but no step!
-            # this is convered by a single environment
-            return "shot_and_asset"
+            if context.entity["type"] == "Shot":
+                return "shot"
+            if context.entity["type"] == "Asset":
+                return "asset"            
+            if context.entity["type"] == "Sequence":
+                return "sequence" 
             
         if context.entity and context.step:
             # we have a step and an entity
