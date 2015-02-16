@@ -508,12 +508,12 @@ paths:
 
     # Alembic caches
     houdini_asset_work_alembic_cache:
-      definition: '@asset_root/work/houdini/cache/alembic/{name}/v{version}/{Shot}_{name}_v{version}_{node}.abc'
+      definition: '@asset_root/work/houdini/cache/alembic/{name}/v{version}/{Asset}_{name}_v{version}_{node}.abc'
       root_name: secondary
 
     # Rendered images
     houdini_asset_render:
-      definition: '@asset_root/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_v{version}.{SEQ}.exr'
+      definition: '@asset_root/work/images/{name}/v{version}/{width}x{height}/{Asset}_{name}_v{version}.{SEQ}.exr'
       root_name: secondary
 
 
