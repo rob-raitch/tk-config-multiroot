@@ -260,7 +260,8 @@ engines:
       tk-mari-projectmanager:
         default_project_name: Shotgun
         get_project_creation_args_hook: '{self}/get_project_creation_args.py'
-        location: {name: tk-mari-projectmanager, type: app_store, version: v1.0.0}
+        location: {name: tk-mari-projectmanager, type: app_store, version: v1.1.0}
+        publish_types: [Alembic Cache]
         template_new_project_name: mari_asset_project_name
       tk-multi-about: '@about'
       tk-multi-breakdown:

@@ -413,6 +413,14 @@ paths:
     # Asset pipeline 
     
     #
+    # Alembic caches
+    #
+    
+    asset_alembic_cache:
+        definition: '@asset_root/publish/caches/{name}.v{version}.abc'
+        root_name: 'primary'
+    
+    #
     # Photoshop
     #
 
