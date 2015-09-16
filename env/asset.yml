@@ -66,7 +66,7 @@ engines:
         template_work: null
         template_work_area: null        
     debug_logging: false
-    location: {name: tk-mari, type: app_store, version: v1.0.0}
+    location: {name: tk-mari, type: app_store, version: v1.0.2}
   tk-maya:
     apps:
         tk-multi-workfiles: '@workfiles-launch-at-startup'
