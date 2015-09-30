@@ -1,4 +1,4 @@
-# Copyright (c) 2013 Shotgun Software Inc.
+# Copyright (c) 2015 Shotgun Software Inc.
 # 
 # CONFIDENTIAL AND PROPRIETARY
 # 
@@ -27,6 +27,5 @@ def create(sg, project_id, log, **kwargs):
     """
     Insert post-project code here
     """
-    # the default config does not require any post-session stuff.
     pass
 

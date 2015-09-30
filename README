@@ -2,7 +2,7 @@
 Tank Multiple Roots Configuration
 -------------------------------------------------------------------------
 
-This configuration shows an example where the Tank code and configuration
+This configuration shows an example where the Toolkit code and configuration
 resides in one location on disk and the actual data resides in another.
 
 Before this configuration can be auto-installed, it needs to be
