@@ -15,7 +15,6 @@ description: Apps and Engines related to Shot based work.
 # include common files
 
 includes:
-
 # launchers for launching DCCs such as Maya, Nuke etc.
 - ./includes/app_launchers.yml
 # common app configurations that are reused across environments
@@ -25,7 +24,6 @@ includes:
 # define all the items that should appear in this environment
 
 engines:
-
   #
   # -------------------------------------------------
   # 3dsmax
@@ -76,9 +74,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current 3ds Max scene
         primary_display_name: 3ds Max Publish
         primary_icon: icons/publish_3dsmax_main.png
@@ -100,9 +98,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: max_shot_snapshot
         template_work: max_shot_work
       tk-multi-workfiles:
@@ -115,9 +113,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -189,9 +187,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current 3ds Max scene
         primary_display_name: 3ds Max Publish
         primary_icon: icons/publish_3dsmax_main.png
@@ -213,9 +211,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: max_shot_snapshot
         template_work: max_shot_work
       tk-multi-workfiles:
@@ -228,9 +226,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -250,8 +248,6 @@ engines:
       type: app_store
       version: v0.1.8
     menu_favourites: []
-
-
   #
   # -------------------------------------------------
   # houdini
@@ -272,9 +268,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current scene
         primary_display_name: Scene File Publish
         primary_icon: icons/publish_houdini_main.png
@@ -296,9 +292,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: houdini_shot_snapshot
         template_work: houdini_shot_work
       tk-multi-workfiles:
@@ -311,9 +307,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -336,7 +332,6 @@ engines:
     - {app_instance: tk-multi-snapshot, name: Snapshot...}
     - {app_instance: tk-multi-workfiles, name: Shotgun Save As...}
     - {app_instance: tk-multi-publish, name: Publish...}
-
   #
   # -------------------------------------------------
   # maya
@@ -395,9 +390,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current Maya scene
         primary_display_name: Maya Publish
         primary_icon: icons/publish_maya_main.png
@@ -439,9 +434,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: maya_shot_snapshot
         template_work: maya_shot_work
       tk-multi-workfiles:
@@ -454,9 +449,9 @@ engines:
         launch_at_startup: true
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -533,9 +528,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current work file
         primary_display_name: Current Work File
         primary_icon: icons/publish_motionbuilder_main.png
@@ -557,9 +552,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: mobu_shot_snapshot
         template_work: mobu_shot_work
       tk-multi-workfiles:
@@ -572,9 +567,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -656,9 +651,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publishes and versions up the current Nuke script.
         primary_display_name: Nuke Publish
         primary_icon: icons/publish_nuke_main.png
@@ -671,7 +666,7 @@ engines:
           display_name: Publish Renders
           icon: icons/publish_nuke_writenode.png
           name: render
-          publish_template: null
+          publish_template:
           required: false
           scene_item_type: write_node
           selected: true
@@ -681,7 +676,7 @@ engines:
           display_name: Send to Screening Room
           icon: icons/publish_nuke_review.png
           name: quicktime
-          publish_template: null
+          publish_template:
           required: false
           scene_item_type: write_node
           selected: true
@@ -729,9 +724,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: nuke_shot_snapshot
         template_work: nuke_shot_work
       tk-multi-workfiles:
@@ -744,9 +739,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -772,26 +767,27 @@ engines:
         width: 1024
       tk-nuke-writenode:
         location:
-          name: tk-nuke-writenode
+          version: v1.0.18
           type: app_store
-          version: v1.0.15
+          name: tk-nuke-writenode
         template_script_work: nuke_shot_work
         write_nodes:
         - file_type: exr
           name: Stereo Exr, 32 bit
-          proxy_publish_template: null
-          proxy_render_template: null
+          proxy_publish_template:
+          proxy_render_template:
           publish_template: nuke_shot_render_pub_stereo
           render_template: nuke_shot_render_stereo
           settings:
             datatype: 32 bit float
           tank_type: Rendered Image
           tile_color: []
+          promote_write_knobs: []
         - file_type: exr
           name: Stereo Exr, 16 bit
           promote_write_knobs: []
-          proxy_publish_template: null
-          proxy_render_template: null
+          proxy_publish_template:
+          proxy_render_template:
           publish_template: nuke_shot_render_pub_stereo
           render_template: nuke_shot_render_stereo
           settings:
@@ -801,8 +797,8 @@ engines:
         - file_type: dpx
           name: Mono Dpx
           promote_write_knobs: []
-          proxy_publish_template: null
-          proxy_render_template: null
+          proxy_publish_template:
+          proxy_render_template:
           publish_template: nuke_shot_render_pub_mono_dpx
           render_template: nuke_shot_render_mono_dpx
           settings: {}
@@ -812,9 +808,9 @@ engines:
     debug_logging: false
     favourite_directories: []
     location:
-      name: tk-nuke
+      version: v0.4.1
       type: app_store
-      version: v0.3.3
+      name: tk-nuke
     menu_favourites:
     - {app_instance: tk-multi-workfiles, name: Shotgun File Manager...}
     - {app_instance: tk-multi-snapshot, name: Snapshot...}
@@ -822,6 +818,9 @@ engines:
     - {app_instance: tk-multi-publish, name: Publish...}
     project_favourite_name: Shotgun Current Project
     use_sgtk_as_menu_name: false
+    timeline_context_menu: []
+    bin_context_menu: []
+    spreadsheet_context_menu: []
   #
   # -------------------------------------------------
   # photoshop
@@ -873,9 +872,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current Photoshop scene
         primary_display_name: Photoshop Publish
         primary_icon: icons/publish_photoshop_main.png
@@ -890,9 +889,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: photoshop_shot_snapshot
         template_work: photoshop_shot_work
       tk-multi-workfiles:
@@ -905,9 +904,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
@@ -966,9 +965,9 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          name: tk-multi-publish
+          version: v0.7.4
           type: app_store
-          version: v0.6.10
+          name: tk-multi-publish
         primary_description: Publish and version up the current Softimage scene
         primary_display_name: Softimage Publish
         primary_icon: icons/publish_softimage_main.png
@@ -990,9 +989,9 @@ engines:
         hook_scene_operation: default
         hook_thumbnail: default
         location:
-          name: tk-multi-snapshot
+          version: v0.5.1
           type: app_store
-          version: v0.4.1
+          name: tk-multi-snapshot
         template_snapshot: softimage_shot_snapshot
         template_work: softimage_shot_work
       tk-multi-workfiles:
@@ -1005,9 +1004,9 @@ engines:
         launch_at_startup: false
         launch_change_work_area_at_startup: false
         location:
-          name: tk-multi-workfiles
+          version: v0.6.17
           type: app_store
-          version: v0.6.15
+          name: tk-multi-workfiles
         saveas_default_name: scene
         saveas_prefer_version_up: false
         sg_entity_type_extra_display_fields: {}
