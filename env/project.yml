@@ -57,6 +57,7 @@ engines:
       type: app_store
       version: v0.1.8
     menu_favourites: []
+
   #
   # -------------------------------------------------
   # Shotgun Desktop
@@ -318,6 +319,7 @@ engines:
     timeline_context_menu: []
     bin_context_menu: []
     spreadsheet_context_menu: []
+
   #
   # -------------------------------------------------
   # Photoshop
