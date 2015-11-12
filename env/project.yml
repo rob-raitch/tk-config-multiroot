@@ -57,7 +57,6 @@ engines:
       type: app_store
       version: v0.1.8
     menu_favourites: []
-
   #
   # -------------------------------------------------
   # Shotgun Desktop
@@ -252,10 +251,9 @@ engines:
     compatibility_dialog_min_version: 2
     debug_logging: false
     location:
-      name: tk-mari
+      version: v1.1.0
       type: app_store
-      version: v1.0.2
-
+      name: tk-mari
   #
   # -------------------------------------------------
   # Maya
@@ -318,7 +316,6 @@ engines:
     timeline_context_menu: []
     bin_context_menu: []
     spreadsheet_context_menu: []
-
   #
   # -------------------------------------------------
   # Photoshop
