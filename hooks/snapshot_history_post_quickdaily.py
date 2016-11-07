@@ -27,4 +27,3 @@ class SnapshotHistoryPostQuickdaily(Hook):
         except TankError:
             # fine, means file wasn't a proper snapshot
             pass
-            

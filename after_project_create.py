@@ -28,4 +28,3 @@ def create(sg, project_id, log, **kwargs):
     Insert post-project code here
     """
     pass
-
