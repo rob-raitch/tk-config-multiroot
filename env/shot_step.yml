@@ -48,7 +48,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
           publish_filters: []
         - caption: My Tasks
           entity_type: Task
@@ -121,7 +121,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -161,7 +161,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
     compatibility_dialog_min_version: 2017
     debug_logging: false
@@ -212,7 +212,7 @@ engines:
           scene_item_type: alembic_cache
           selected: false
           tank_type: Alembic Cache
-        - description: Publish a rendered image sequence
+        - description: Publish a rendered image episode
           display_group: Renders
           display_name: Rendered
           group_name: default
@@ -257,7 +257,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -295,7 +295,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
         actions_hook: '{self}/general_actions.py'
         shotgun_fields_hook: '{self}/shotgun_fields.py'
@@ -341,7 +341,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -404,7 +404,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -495,7 +495,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -551,7 +551,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -622,7 +622,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -662,7 +662,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
     debug_logging: false
     location:
@@ -706,7 +706,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -827,7 +827,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -1083,7 +1083,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -1111,7 +1111,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
         actions_hook: '{self}/general_actions.py:{self}/tk-nuke_actions.py'
         location:
@@ -1163,7 +1163,7 @@ engines:
           entity_type: Shot
           filters:
           - [project, is, '{context.project}']
-          hierarchy: [sg_sequence, code]
+          hierarchy: [sg_episode, code]
         - caption: My Tasks
           entity_type: Task
           filters:
@@ -1227,7 +1227,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -1267,7 +1267,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
     shelf_favorites:
     - {app_instance: tk-multi-workfiles2, name: File Open...}
@@ -1361,7 +1361,7 @@ engines:
           entity_type: Task
           filters:
           - [entity, type_is, Shot]
-          hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+          hierarchy: [entity.Shot.sg_episode, entity, step, content]
         file_extensions: []
         hook_copy_file: default
         hook_filter_publishes: default
@@ -1401,7 +1401,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
     debug_logging: false
     location:
