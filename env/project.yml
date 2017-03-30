@@ -459,7 +459,7 @@ engines:
           Version:
           - actions:
             - quicktime_clipboard
-            - sequence_clipboard
+            - episode_clipboard
             filters: {}
     bin_context_menu:
     - {app_instance: tk-multi-workfiles2, keep_in_menu: false, name: File Save...,
