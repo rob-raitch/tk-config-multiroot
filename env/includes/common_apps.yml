@@ -47,7 +47,7 @@ shotgunpanel:
     Version:
     - actions:
       - quicktime_clipboard
-      - sequence_clipboard
+      - episode_clipboard
       filters: {}
 #
 # General File Manager configuration.
@@ -80,7 +80,7 @@ workfiles2:
     entity_type: Task
     filters:
     - [entity, type_is, Shot]
-    hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+    hierarchy: [entity.Shot.sg_episode, entity, step, content]
   file_extensions: []
   hook_copy_file: '{self}/copy_file.py'
   hook_filter_publishes: default
@@ -120,7 +120,7 @@ workfiles2-launch-at-startup:
     entity_type: Task
     filters:
     - [entity, type_is, Shot]
-    hierarchy: [entity.Shot.sg_sequence, entity, step, content]
+    hierarchy: [entity.Shot.sg_episode, entity, step, content]
   file_extensions: []
   hook_copy_file: '{self}/copy_file.py'
   hook_filter_publishes: default
