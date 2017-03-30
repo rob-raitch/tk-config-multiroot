@@ -19,7 +19,7 @@ primary:
     windows_path:
 
 secondary:
-    description: "A top-level root folder where *only* Asset data lives.  Project folders will be created beneath this location as well as another for Sequences and Shots."
+    description: "A top-level root folder where *only* Asset data lives.  Project folders will be created beneath this location as well as another for Episodes and Shots."
     mac_path:
     linux_path:
     windows_path:
